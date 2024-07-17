@@ -26,11 +26,13 @@
                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:boder-indigo-500 focus:ring-indigo-500 sm:text-sm" 
                       placeholder="Here is where you write your note.."
 
-                      ></textarea>
+                      ><?= $_POST['body'] ?? '' ?></textarea>
 
                       <?php if (isset($errors['body'])) : ?>
 
-                        <p class="text-red-500 text-xs mt-2"><?= $errors['body'] ?></p>
+                        <p class="text-red-500 text-xs mt-2">
+
+                          <?= $errors['body'] ?></p>
 
                         <?php endif;?>
 
